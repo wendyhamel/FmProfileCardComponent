@@ -8,28 +8,53 @@
   
   <title>Frontend Mentor | Profile card component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Tailwind play cdn and local tailwind config file -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="src/tailwind.config.js"></script>
+
+  <!-- Alpine.js  -->
+  <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
 </head>
-<body>
-  Victor Crest
-  26
-  London
-
-  80K
-  Followers
-
-  803K
-  Likes
-
-  1.4K
-  Photos
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
+<body class="antialiased">
+  <main class="relative bg-cyan overflow-hidden min-h-screen grid place-items-center">
+    <img class="absolute top-0 left-0 object-cover -translate-x-1/2 -translate-y-1/2 md:-translate-x-1/4 md:-translate-y-1/2" src="/images/bg-pattern-top.svg" alt="pattern of a gradient circle">
+    <img class="absolute bottom-0 right-0 object-cover translate-x-1/2 translate-y-1/2 md:translate-x-1/4 md:translate-y-2/3" src="/images/bg-pattern-bottom.svg" alt="pattern of a gradient circle">
+    <section class="relative max-w-[350px] bg-white rounded-2xl overflow-hidden mx-6">
+      <div class="relative">
+        <img class="relative" src="/images/bg-pattern-card.svg" alt="cyan colored background with small fading circles">
+        <div class="absolute bottom-0 inset-x-0">
+          <img class="mx-auto rounded-full border-4 border-white translate-y-1/2" src="/images/image-victor.jpg" alt="avatar image of Victor Crest">
+        </div>
+      </div>
+      <div class="relative mt-14 border-b border-gray/20 text-center px-8 pt-4 pb-6">
+        <h1 class="space-x-2 text-lg pb-1"><span class="text-blue-dark font-bold">Victor Crest</span><span class="text-gray">26</span></h1>
+        <p class="text-blue-gray-dark text-sm">London</p>
+      </div>
+      <ul class="flex justify-between py-6 px-12 mx-1">
+        <li class="text-center">
+          <p class="text-blue-dark font-bold text-lg">80K</p>
+          <p class="text-blue-gray-dark text-[0.65rem] tracking-widest">Followers</p>
+        </li>
+        <li class="text-center">
+          <p class="text-blue-dark font-bold text-lg">803K</p>
+          <p class="text-blue-gray-dark text-[0.65rem] tracking-widest">Likes</p>
+        </li>
+        <li class="text-center">
+          <p class="text-blue-dark font-bold text-lg">1.4K</p>
+          <p class="text-blue-gray-dark text-[0.65rem] tracking-widest">Photos</p>
+        </li>
+      </ul>
+    </section>
+  </main>
+  <footer class="fixed bottom-0 inset-x-0 text-center text-xs py-2 bg-blue-dark text-white opacity-0 translate-y-2 hover:opacity-100 hover:translate-y-0 transform transition ease-in-out duration-150">
+    Challenge by <a class="underline hover:text-cyan" href="https://www.frontendmentor.io/challenges/profile-card-component-cfArpWshJ" target="_blank">Frontend Mentor</a>.
+    Coded by <a class="underline hover:text-cyan" href="https://www.frontendmentor.io/profile/wendyhamel" target="_blank">Wendy Hamel</a>.
+  </footer>
 </body>
 </html>
